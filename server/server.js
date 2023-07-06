@@ -1,10 +1,10 @@
 const express = require("express");
+require("./connection")
 const cors = require("cors");
 const app = express();
 app.use(express.json());
 
-const Router = require ("./router/.js");
-const Router = require ("./router/.js");
+const quoteRouter = require ("./Router/quoteRouter");
 
 
 app.use(
@@ -13,12 +13,11 @@ app.use(
     })
   );
 
-app.use("/", );
-app.use("/", );
+app.use("/quote", quoteRouter);
 
 
 
-const PORT = 3636;
+const PORT = 3636 || process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}...`);
 });
