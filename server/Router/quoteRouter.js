@@ -1,6 +1,6 @@
 const router = require ("express").Router();
 
-var quoteController = require ("../controllers/skillController.js");
+const quoteController = require ("../Controllers/quoteController.js");
 
 router.get("/", quoteController.getQuote)
 router.post("/", quoteController.postQuote)
