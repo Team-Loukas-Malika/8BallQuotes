@@ -4,8 +4,7 @@ const QuoteSchema = new mongoose.Schema({
   content: { type: String, require:true},
   author: String,
   urlImage: String,
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }  
+  createdAt: { type: Date, default: Date.now } 
 })
 
 const QuoteModel = mongoose.model("Quote", QuoteSchema);
