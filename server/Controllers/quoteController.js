@@ -13,7 +13,7 @@ const getQuote = async(req, res) =>{
 const postQuote = async(req, res) =>{
   try {
     let newQuote = await QuoteModel.create(req.body);
-    res.send({msg: "Quote created successfully!"});
+    res.send({msg: "Quote created successfully!", newQuote});
   } catch (error) {
     res.send({error: "An error occurred while creating quote"});
   }
