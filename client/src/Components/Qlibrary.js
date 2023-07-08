@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import defaultImage from "../assets/images/coffee.avif"
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function QuoteLibrary() {
   const [allQuotes, setAllQuotes] = useState([]);
@@ -23,26 +26,26 @@ function QuoteLibrary() {
 
 
   return ( 
-    <div>
+    <Row xs={1} md={2} className="g-4">
       {allQuotes.map(quote =>{
         return (
-          <div key={quote._id} >
-            <div>
-              <p>Content: {quote.content}</p>
-              <p>Author: {quote.author}</p>
-              <p>Content: {quote.content}</p>
-              <p>Created At: {new Date(quote.createdAt).toLocaleString()} </p>
-            </div>
-
-            <div>
-              {quote.urlImage} ? (<img src={quote.urlImage} alt="urlImage" />) : (<img src={defaultImage} alt="defaultImage" />)
-            </div>
-          </div>
+          <Col key={quote._id} >
+            <Card>
+              <Card.Body>
+                <Card.Title>{quote.content ? quote.content : "It's not a bug. It's an undocumented feature"}</Card.Title>
+                <Card.Text>Author: {quote.author ? quote.author : "Anonymous"}</Card.Text>
+                <Card.Text>Created At: {new Date(quote.createdAt).toLocaleString()} </Card.Text>
+              </Card.Body>
+              <div>
+                <Card.Img variant="top" src={quote.urlImage ? quote.urlImage : defaultImage} alt="image" />
+              </div>
+            </Card>
+          </Col>
         )
       })}
       
 
-    </div>
+    </Row>
    );
 }
 
