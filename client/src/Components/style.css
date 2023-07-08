@@ -1,5 +1,46 @@
-.home-page {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 21px;
+}
+
+/* .home-page {
     background-image: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg");
+} */
 
+.footer {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: gray;
+    color: #ccc;
+    vertical-align: middle;
+}
 
+.footer a {
+    color: #ccc;
+}
+
+.footer-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.footer-left{
+    z-index: 50;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.quote-image {
+    width: 400px;
 }

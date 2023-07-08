@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./style.css"
+import QuoteOfDay from "./QuoteOfDay";
 
 function HomePage() {
     var navigate = useNavigate();
@@ -17,9 +18,16 @@ function HomePage() {
 
     return (
         <div className="home-page">
-          <header className="header">8ballQuotes</header>
-          <button className= "createq" onClick = {()=>{ createq();}}>CreateQ</button>
-          <button className= "qlibrary" onClick = {()=>{ qlibrary();}}>Qlibrary</button>
+          <div>
+            <header className="header">8ballQuotes</header>
+            <button className= "createq" onClick = {()=>{ createq();}}>CreateQ</button>
+            <button className= "qlibrary" onClick = {()=>{ qlibrary();}}>Qlibrary</button>
+          </div>
+
+          <div>
+            <QuoteOfDay/>
+          </div>
+          
             
         </div>
       );
