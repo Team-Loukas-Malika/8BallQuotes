@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./style.css"
 import QuoteOfDay from "./QuoteOfDay";
-import qball from "../assets/images/Qball.png"
+
 
 function HomePage() {
     var navigate = useNavigate();
