@@ -8,6 +8,7 @@ function CreateQuote() {
 
   async function createQ(event) {
     event.preventDefault();
+    console.log("create")
     let newQuote = {
       content: content,
       author: author,
@@ -15,9 +16,9 @@ function CreateQuote() {
       createdAt: Date()
     };
     try {
-      let response = await axios.post("http://localhost:3636/quote/create", newQuote)
+      let response = await axios.post("http://localhost:3636/quote/", newQuote)
       if (response.status === 200) {
-        alert(response.data.message)
+        alert("Quote created successfully!")
       } else {
         alert("Error")
       }
@@ -33,7 +34,7 @@ function CreateQuote() {
       <textarea name="content"
       id="content"
       cols="30"
-      rows="10"
+      rows="5"
       value={content}
       onChange={(event) => setContent(event.target.value)}
       >  
