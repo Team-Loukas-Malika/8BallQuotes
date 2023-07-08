@@ -8,7 +8,6 @@ function CreateQuote() {
 
   async function createQ(event) {
     event.preventDefault();
-    console.log("create")
     let newQuote = {
       content: content,
       author: author,
