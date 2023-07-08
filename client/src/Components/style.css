@@ -44,3 +44,11 @@ body {
 .quote-image {
     width: 400px;
 }
+
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
