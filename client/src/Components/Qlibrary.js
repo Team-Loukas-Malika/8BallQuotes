@@ -19,7 +19,7 @@ function QuoteLibrary() {
   useEffect(() =>{
     getQuotes();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[allQuotes])
+  },[])
 
 
   return ( 
