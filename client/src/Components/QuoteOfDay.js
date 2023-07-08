@@ -1,4 +1,4 @@
-
+import "./style.css"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import footerIcon from "../assets/images/footericon.png";
@@ -26,30 +26,27 @@ function QuoteOfDay() {
 
 
   return ( 
-    <div>
-      <h1> Tap to generate a quote to cheer you up!</h1>
-      <img onClick={getQuoteOfDay} src={qball} alt="qball" /> 
+    <div className="centered-container">
+      <h1>Tap to generate a quote to cheer you up!</h1>
+      <img onClick={getQuoteOfDay} src={qball} alt="qball" className="centered-image" /> 
       <div>
         <p>Quote: {quote.content}</p>
         <p>Author: {quote.author}</p>
-        <p>Date Added: {quote.dateAdded}</p>
-        <p>Date Modified: {quote.dateModified}</p>
         <p>Tags: {quote.tags}</p>
         <img src={coffeeImage} alt="coffee cup" className="quote-image" />        
       </div>
-
+  
       <footer className="footer">
         <span className="footer-left">
-        <img src={footerIcon} className="footer-icon" alt="8BallQuotes.our-site-here" />
-        <a href="http://localhost:3636/quote">
-        8BallQuotes®
-        </a>
+          <img src={footerIcon} className="footer-icon" alt="8BallQuotes.our-site-here" />
+          <a href="http://localhost:3636/quote">
+            8BallQuotes®
+          </a>
         </span>
       </footer>
-      
-      
     </div>
-   );
+  );
+  
 }
 
 export default QuoteOfDay;
