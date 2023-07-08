@@ -11,11 +11,11 @@ function CreateQuote() {
     let newQuote = {
       content: content,
       author: author,
-      urlImage: urlImage || "http://localhost:3636/quote/create",
+      urlImage: urlImage || "",
       createdAt: Date()
     };
     try {
-      let response = await axios.post("", newQuote)
+      let response = await axios.post("http://localhost:3636/quote/create", newQuote)
       if (response.status === 200) {
         alert(response.data.message)
       } else {
