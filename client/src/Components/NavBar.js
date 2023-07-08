@@ -10,7 +10,7 @@ function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">8ballQuotes</Navbar.Brand>
+        <Navbar.Brand href="/">8ballQuotes</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Form className="d-flex me-auto">
