@@ -17,13 +17,15 @@ function HomePage() {
 
 
 
-    return (
+      return (
         <div className="home-page">
-          <img src={qball} alt="qball" /> 
+          <div className="centered-image">
+            <img src={qball} alt="qball" /> 
+          </div>
           <QuoteOfDay/>
-            
         </div>
       );
+      
   }
   
   
