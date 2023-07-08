@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+
 
 function Header() {
   return (
@@ -21,8 +23,8 @@ function Header() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Nav className="my-2 my-lg-0" navbarScroll>
-            <Button variant="outline-primary" className="mx-2">CreateQ</Button>
-            <Button variant="outline-secondary">Qlibrary</Button>
+            <Button variant="outline-primary" className="mx-2"><Nav.Link href="/createq"  >CreateQ</Nav.Link></Button>
+            <Button variant="outline-secondary"><Nav.Link href="/qlibrary">Qlibrary</Nav.Link></Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
