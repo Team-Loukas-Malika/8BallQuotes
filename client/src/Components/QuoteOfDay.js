@@ -2,8 +2,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import footerIcon from "../assets/images/footericon.png";
-import coffeeImage from "../assets/images/coffee.avif"
-const APIurl = "https://api.quotable.io/random"
+import coffeeImage from "../assets/images/coffee.avif";
+import qball from "../assets/images/Qball.png"
+const APIurl = "https://api.quotable.io/random";
+
 
 function QuoteOfDay() {
  
@@ -25,8 +27,8 @@ function QuoteOfDay() {
 
   return ( 
     <div>
-      <h1>Here is a quote to cheer you up!</h1>
-
+      <h1> Tap to generate a quote to cheer you up!</h1>
+      <img onClick={getQuoteOfDay} src={qball} alt="qball" /> 
       <div>
         <p>Quote: {quote.content}</p>
         <p>Author: {quote.author}</p>
