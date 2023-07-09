@@ -7,11 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import AppFooter from "./Components/Footer";
 
 
 function App() {
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer App">
       <Header />
       <Card />
       <Router>
@@ -23,6 +24,9 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <footer>
+        <AppFooter/>
+      </footer>
 
     </div>
   );

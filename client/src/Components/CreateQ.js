@@ -32,6 +32,7 @@ function CreateQuote() {
 
 
   return ( 
+    <div className="form-container">
     <Form onSubmit={createQ} className="form" >
       <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label column sm="2">Content:</Form.Label>
@@ -77,6 +78,7 @@ function CreateQuote() {
       <Button  type='submit'>Create Quote</Button>
 
     </Form>
+    </div>
    );
 }
 
