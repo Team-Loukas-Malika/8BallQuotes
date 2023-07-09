@@ -47,11 +47,11 @@
   }
 
 .centered-container h1{
-    color: wheat;
+    color: #ffffff;
     font-size: 70px;
     margin-top: 30px;
     font-weight: 700;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
   @keyframes rotate{
@@ -134,7 +134,7 @@
     bottom: 0;
     height: 60px;
   }
-  
+
   .copyright{
     display: flex;
     position: fixed;

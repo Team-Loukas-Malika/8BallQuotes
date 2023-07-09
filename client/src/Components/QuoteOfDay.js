@@ -37,7 +37,7 @@ function QuoteOfDay() {
     try {
       let response = await axios.post("http://localhost:3636/quote/", quotes)
       if (response.status === 200) {
-        alert('Your quote has been saved successfully!');
+        alert('Your quote has been saved successfully! Go to QLibrary.');
         console.log(quote)
       } else {
         throw new Error(`Failed with status code ${response.status}`);
