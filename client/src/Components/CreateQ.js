@@ -1,5 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 function CreateQuote() {
   const [content, setContent] = useState("");
@@ -28,40 +32,51 @@ function CreateQuote() {
 
 
   return ( 
-    <form onSubmit={createQ} className="form" >
-      <label htmlFor="content">Content:</label>
-      <textarea name="content"
-      id="content"
-      cols="30"
-      rows="5"
-      value={content}
-      onChange={(event) => setContent(event.target.value)}
-      >  
-      </textarea>
+    <Form onSubmit={createQ} className="form" >
+      <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label column sm="2">Content:</Form.Label>
+        <Col sm="10">
+          <Form.Control 
+          as="textarea" 
+          rows={3}
+          value={content}
+          onChange={(event) => setContent(event.target.value)} 
+          />
+        </Col>       
+      </Form.Group>
+      
+      <br />
+
+      <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label htmlFor="author" column sm="2">Author:</Form.Label>
+        <Col sm="10">
+          <Form.Control
+          type="text"
+          value={author}
+          onChange={(event) => setAuthor(event.target.value)} 
+          />
+        </Col>
+      </Form.Group>
+      
 
       <br />
 
-      <label htmlFor="author">Author:</label>
-      <input
-      type="text"
-      value={author}
-      onChange={(event) => setAuthor(event.target.value)} 
-      />
+      <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label column sm="2">imageUrl:</Form.Label>
+        <Col sm="10">
+          <Form.Control
+          type="text"
+          value={urlImage}
+          onChange={(event) => setUrlImage(event.target.value)} 
+          />
+        </Col>
+      </Form.Group>
 
       <br />
 
-<label htmlFor="imageUrl">imageUrl:</label>
-      <input
-      type="text"
-      value={urlImage}
-      onChange={(event) => setUrlImage(event.target.value)} 
-      />
+      <Button  type='submit'>Create Quote</Button>
 
-      <br />
-
-      <button type='submit'>Create Quote</button>
-
-    </form>
+    </Form>
    );
 }
 

@@ -3,7 +3,7 @@ import CreateQ from "./Components/CreateQ";
 import HomePage from "./Components/HomePage";
 import Qlibrary from "./Components/Qlibrary";
 import Header from "./Components/NavBar";
-// import card from "./Components/Card";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
-    <div className="">
+    <div className="cursor-pointer">
       <Header />
       <Card />
       <Router>
