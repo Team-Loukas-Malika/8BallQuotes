@@ -5,14 +5,15 @@ import Qlibrary from "./Components/Qlibrary";
 import Header from "./Components/NavBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-
 import 'bootstrap/dist/css/bootstrap.css';
 import AppFooter from "./Components/Footer";
-
+import React from "react";
+import AnimatedCursor from "react-animated-cursor"
 
 function App() {
   return (
     <div className="cursor-pointer App">
+      <AnimatedCursor />
       <Header />
       <Card />
       <Router>
