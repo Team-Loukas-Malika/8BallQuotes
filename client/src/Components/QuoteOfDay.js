@@ -6,7 +6,7 @@ import "./style.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import footerIcon from "../assets/images/footericon.png";
+// import footerIcon from "../assets/images/footericon.png";
 import coffeeImage from "../assets/images/coffee.avif";
 import qball from "../assets/images/Qball.png"
 const APIurl = "https://api.quotable.io/random";
@@ -64,9 +64,14 @@ function QuoteOfDay() {
 
       <br />
 
-      <Button onClick={saveQuote} variant="primary">Save Quote</Button>
+      <span className='save-download'>
+      <FontAwesomeIcon icon={faDownload} bounce size="2xl" style={{color: "#0d6efd",}} />
+        <Button onClick={saveQuote} variant="primary">Save Quote</Button>
+      </span>
+
+      
       <br />
-      <FontAwesomeIcon icon={faDownload} bounce size="2xl" />
+      
   
 
     </div>
