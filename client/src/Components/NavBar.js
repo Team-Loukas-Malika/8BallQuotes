@@ -5,7 +5,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logoIcon from "../assets/images/Qball.png"
 import "./style.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+
 
 
 function Header() {
