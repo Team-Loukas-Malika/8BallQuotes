@@ -26,7 +26,8 @@ function AppFooter() {
   }
 
   return (
-    <Container fluid className="footer-container"> 
+    <span className="footer-container">
+    <Container fluid > 
       <div className="copyright">8BallQuotes®</div>
       <div className="socials">
         <ul>
@@ -41,6 +42,7 @@ function AppFooter() {
         )
       }
     </Container>
+    </span>
   )
 }
 

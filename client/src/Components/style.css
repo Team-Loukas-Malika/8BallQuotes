@@ -133,10 +133,16 @@
     position: fixed;
     bottom: 0;
     height: 60px;
+
+  }
+  .copyright{
+    display: flex;
+    position: fixed;
+    text-align: left;
+    margin-top: auto;
   }
   
   .socials {
-    flex-grow: 1;
     display: flex;
     vertical-align: middle;
     justify-content: center;
