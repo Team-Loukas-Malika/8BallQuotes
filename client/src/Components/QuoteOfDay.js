@@ -37,7 +37,7 @@ function QuoteOfDay() {
     try {
       let response = await axios.post("http://localhost:3636/quote/", quotes)
       if (response.status === 200) {
-        alert('Your quote has been saved successfully!');
+        alert('Your quote has been saved successfully! Go to QLibrary.');
         console.log(quote)
       } else {
         throw new Error(`Failed with status code ${response.status}`);
@@ -53,7 +53,7 @@ function QuoteOfDay() {
       <h1>Tap to generate a quote to cheer you up!</h1>
       <img onClick={getQuoteOfDay} src={qball} alt="qball" className="cursor-pointer centered-image " /> 
 
-      <Card style={{ width: '40rem' }}>
+      <Card style={{ width: '30rem' }}>
         <Card.Body>
           <Card.Title>Quote: {quote.content}</Card.Title>
           <Card.Text>Author: {quote.author}</Card.Text>

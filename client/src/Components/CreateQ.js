@@ -25,7 +25,7 @@ function CreateQuote() {
     try {
       let response = await axios.post("http://localhost:3636/quote/", newQuote)
       if (response.status === 200) {
-        alert("Quote created successfully!")
+        alert("Quote created successfully! Go to QLibrary.")
         console.log(newQuote)
       } else {
         alert("Error")
