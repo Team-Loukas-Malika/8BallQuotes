@@ -14,7 +14,7 @@ const APIurl = "https://api.quotable.io/random";
 
 
 function QuoteOfDay() {
- 
+
   const [quote, setQuote] = useState([]);
 
   async function getQuoteOfDay() {
