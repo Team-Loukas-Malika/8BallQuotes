@@ -11,7 +11,7 @@ function QuoteLibrary() {
   async function getQuotes() {
     try {
       let response = await axios.get("http://localhost:3636/quote")
-      // console.log(response)
+      console.log(response)
       setAllQuotes(response.data)
       console.log(allQuotes)
     } catch (error) {
@@ -34,6 +34,7 @@ function QuoteLibrary() {
               <Card.Body>
                 <Card.Title>{quote.content ? quote.content : "It's not a bug. It's an undocumented feature"}</Card.Title>
                 <Card.Text>Author: {quote.author ? quote.author : "Anonymous"}</Card.Text>
+                <Card.Text>Tags: {quote.tags ? quote.tags : ""}</Card.Text>
                 <Card.Text>Created At: {new Date(quote.createdAt).toLocaleString()} </Card.Text>
               </Card.Body>
               <div>

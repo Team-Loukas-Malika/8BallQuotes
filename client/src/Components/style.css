@@ -26,9 +26,9 @@
     overflow: hidden;
   }
 
-.form {
+.form-container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 10px;
     background-color: rgb(207, 220, 253);
     border-radius:  20px;
@@ -133,8 +133,8 @@
     position: fixed;
     bottom: 0;
     height: 60px;
-
   }
+  
   .copyright{
     display: flex;
     position: fixed;
@@ -225,5 +225,9 @@
 
   .save-download button {
     margin-left: 30px;
+  }
+
+  .createQButton {
+    margin-bottom: 30px;
   }
 

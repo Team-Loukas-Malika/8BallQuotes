@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
 // import footerIcon from "../assets/images/footericon.png";
-import coffeeImage from "../assets/images/coffee.avif";
+import defaultImage from "../assets/images/coffee.avif";
 import qball from "../assets/images/Qball.png"
 const APIurl = "https://api.quotable.io/random";
 
@@ -32,12 +32,13 @@ function QuoteOfDay() {
       content : quote.content,
       author  : quote.author,
       tags    : quote.tags || [],
-      image   : coffeeImage,
+      image   : quote.image || defaultImage,
     }
     try {
       let response = await axios.post("http://localhost:3636/quote/", quotes)
       if (response.status === 200) {
         alert('Your quote has been saved successfully!');
+        console.log(quote)
       } else {
         throw new Error(`Failed with status code ${response.status}`);
       }
@@ -59,7 +60,7 @@ function QuoteOfDay() {
           <Card.Text>Tags: {quote.tags}</Card.Text>
         </Card.Body>
         
-        <Card.Img variant="top" src={coffeeImage} alt="coffee cup" className="quote-imag" />        
+        <Card.Img variant="top" src={defaultImage} alt="coffee cup" className="quote-imag" />        
       </Card>
 
       <br />
@@ -70,9 +71,7 @@ function QuoteOfDay() {
       </span>
 
       
-      <br />
-      
-  
+      <br />  
 
     </div>
   );
