@@ -122,6 +122,11 @@
     max-width: 40px;
   }
 
+  .library-container {
+    max-width: 1200px;
+    margin: 70px auto;
+  }
+
   
   .footer-container {
     padding: 10px;

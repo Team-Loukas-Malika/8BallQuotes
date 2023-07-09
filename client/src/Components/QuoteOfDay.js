@@ -53,7 +53,7 @@ function QuoteOfDay() {
       <h1>Tap to generate a quote to cheer you up!</h1>
       <img onClick={getQuoteOfDay} src={qball} alt="qball" className="cursor-pointer centered-image " /> 
 
-      <Card style={{ width: '40rem' }}>
+      <Card style={{ width: '30rem' }}>
         <Card.Body>
           <Card.Title>Quote: {quote.content}</Card.Title>
           <Card.Text>Author: {quote.author}</Card.Text>

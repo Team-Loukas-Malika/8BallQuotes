@@ -26,7 +26,8 @@ function QuoteLibrary() {
 
 
   return ( 
-    <Row xs={1} md={2} className="g-4">
+    <div className="library-container">
+      <Row xs={1} md={2} className="g-4">
       {allQuotes.map(quote =>{
         return (
           <Col key={quote._id} >
@@ -47,6 +48,8 @@ function QuoteLibrary() {
       
 
     </Row>
+    </div>
+    
    );
 }
 
