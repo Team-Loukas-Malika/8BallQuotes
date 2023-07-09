@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import "./style.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import footerIcon from "../assets/images/footericon.png";
@@ -49,7 +50,7 @@ function QuoteOfDay() {
   return ( 
     <div className="centered-container">
       <h1>Tap to generate a quote to cheer you up!</h1>
-      <img onClick={getQuoteOfDay} src={qball} alt="qball" className="centered-image" /> 
+      <img onClick={getQuoteOfDay} src={qball} alt="qball" className="cursor-pointer centered-image " /> 
 
       <Card style={{ width: '40rem' }}>
         <Card.Body>

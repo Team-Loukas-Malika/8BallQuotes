@@ -4,41 +4,23 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 21px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
-body {
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 21px;
-}
 
 /* .home-page {
     background-image: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg");
 } */
 
-.footer {
-    margin: 10px 0;
+.form {
+    max-width: 600px;
+    height: 100vh;
+    margin: 20px auto;
     padding: 10px;
-    background-color: gray;
-    color: #ccc;
-    vertical-align: middle;
-}
-
-.footer a {
-    color: #ccc;
-}
-
-.footer-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.footer-left{
-    z-index: 50;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-left: 4px;
+    background-color: rgb(207, 220, 253);
 }
 
 .quote-image {
@@ -61,6 +43,42 @@ body {
         transform:rotate(-360deg) ;
     }
   }
+
+  @keyframes shake {
+    0% {
+        transform:translateX(0);
+    }
+    10% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+    20% {
+        transform: translateX(5px) rotate(5deg);
+    }
+    30% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+    40% {
+        transform: translateX(5px) rotate(5deg);
+    }
+    50% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+    60% {
+        transform: translateX(5px) rotate(5deg);
+    }
+    70% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+    80% {
+        transform: translateX(5px) rotate(5deg);
+    }
+    90%{
+        transform: translateX(-5px) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(0)rotate(0);
+    }
+  }
   
   .centered-image {
     margin-top: 10px;
@@ -72,8 +90,34 @@ body {
     animation: rotate 10s infinite linear;
   }
 
+  .centered-image:hover {
+    animation: shake 0.9s;
+  }
+
   .nav-logo {
     max-width: 40px;
   }
   
-  
+  .footer {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: gray;
+    color: #ccc;
+    vertical-align: middle;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.footer-left{
+    z-index: 50;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 4px;
+}
