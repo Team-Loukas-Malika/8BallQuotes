@@ -68,14 +68,7 @@ function QuoteOfDay() {
       <br />
       <FontAwesomeIcon icon={faDownload} bounce size="2xl" />
   
-      <footer className="footer">
-        <span className="footer-left">
-          <img src={footerIcon} className="footer-icon" alt="8BallQuotes.our-site-here" />
-          <a href="http://localhost:3636/quote">
-            8BallQuotes®
-          </a>
-        </span>
-      </footer>
+
     </div>
   );
   

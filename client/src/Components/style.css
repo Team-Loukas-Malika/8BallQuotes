@@ -15,12 +15,23 @@
     background-image: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg");
 } */
 
+.App {
+    text-align: center;
+    background: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg") no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+
+  }
+
 .form {
     max-width: 600px;
-    height: 100vh;
     margin: 20px auto;
     padding: 10px;
     background-color: rgb(207, 220, 253);
+    border-radius:  20px;
 }
 
 .quote-image {
@@ -34,6 +45,13 @@
     justify-content: center;
     text-align: center;
   }
+
+.centered-container h1{
+    color: white;
+    font-size: 15px large;
+    margin-top: 30px;
+
+}
 
   @keyframes rotate{
     0% {
@@ -91,33 +109,107 @@
   }
 
   .centered-image:hover {
+    cursor: pointer;
     animation: shake 0.9s;
   }
+  .bg-body-tertiary{
+    height: 70px;
+    margin:auto;
+  }
+
 
   .nav-logo {
     max-width: 40px;
   }
+
   
-  .footer {
-    margin: 10px 0;
+  .footer-container {
     padding: 10px;
     background-color: gray;
     color: #ccc;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+  }
+  
+  .socials {
+    flex-grow: 1;
+    display: flex;
     vertical-align: middle;
-}
+    justify-content: center;
+  }
+  
+  .socials ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .socials li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+  }
 
-.footer a {
-    color: #ccc;
-}
+  .socials a {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #030303;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding: 2px;
+    transition: background 0.3s linear, color 0.3s linear;
+    -webkit-transition: background 0.3s linear, color 0.3s linear;
+  }
+  
+  .socials a:hover {
+    background: #2e2929;
+    color: #fff;
+  }
+  
+  .socials .fab {
+    line-height: 2;
+  }
+  
+  .go-top {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #141688;
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+  }
+  
+  .go-top:before {
+    width: 13px;
+    height: 13px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    content: '';
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px 1px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3px 0 0 -6px;
+  }
+  
+  .go-top:hover {
+    background: #f41a1a;
+  }
 
-.footer-icon {
-    height: 20px;
-    width: 20px;
-}
 
-.footer-left{
-    z-index: 50;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-left: 4px;
-}
