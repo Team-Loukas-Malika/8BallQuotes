@@ -19,7 +19,18 @@ const postQuote = async(req, res) =>{
   }
 }
 
+const findQuote = async(req, res) => {
+  try {
+    let tag = req.params.tags
+    let tagQuote = await QuoteModel.find({ tags: { $regex: new RegExp(tag, "i") } })
+    res.send(tagQuote)
+  } catch (error) {
+    console.log({error: "Error finding quotes by tags"});
+  }
+}
+
 module.exports = {
   getQuote,
-  postQuote
+  postQuote,
+  findQuote
 }
