@@ -6,16 +6,18 @@ import Navbar from "react-bootstrap/Navbar";
 import logoIcon from "../assets/images/Qball.png";
 import "./style.css";
 import { useState } from "react";
-import axios from "axios";
+import axios from "axios"
+import {useNavigate } from "react-router-dom";
 
 function Header() {
   const [tag, setTag] = useState("");
-
+  const navigate = useNavigate();
   async function handleSearch(event) {
     event.preventDefault();
     try {
       let response = await axios.get(`http://localhost:3636/quote/tags/${tag}`);
       console.log("response", response);
+      navigate("/tags")
     } catch (error) {
       console.log("Error searching quotes", error);
     }

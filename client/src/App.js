@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="cursor-pointer App">
       <AnimatedCursor />
-      <Header />
       <Card />
       <Router>
+      <Header />
         <div>
           <Routes>
             <Route path="/" element={<HomePage />} />
