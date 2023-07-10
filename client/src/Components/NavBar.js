@@ -17,7 +17,7 @@ function Header() {
     try {
       let response = await axios.get(`http://localhost:3636/quote/tags/${tag}`);
       console.log("response", response);
-      navigate("/tags")
+      navigate()
     } catch (error) {
       console.log("Error searching quotes", error);
     }
