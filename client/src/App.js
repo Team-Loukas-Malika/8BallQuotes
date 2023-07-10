@@ -4,6 +4,7 @@ import HomePage from "./Components/HomePage";
 import Qlibrary from "./Components/Qlibrary";
 import Header from "./Components/NavBar";
 import SearchByTag from "./Components/SearchByTag";
+import SearchResults from "./Components/SearchResults"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/createq" element={<CreateQ />} />
             <Route path="/qlibrary" element={<Qlibrary />} />
             <Route path="/tags" element={<SearchByTag />} />
+            <Route path="/query" element={<SearchResults />} />
           </Routes>
         </div>
       </Router>

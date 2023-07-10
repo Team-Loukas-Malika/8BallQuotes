@@ -44,9 +44,7 @@ function QuoteLibrary() {
             </Card>
           </Col>
         )
-      })}
-      
-
+      })}     
     </Row>
     </div>
     
