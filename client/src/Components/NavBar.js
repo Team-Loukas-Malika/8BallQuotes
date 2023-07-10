@@ -27,7 +27,11 @@ function Header() {
       console.log("Error searching quotes", error);
     }
   }
-
+ function handleKeyPress (e){
+  if(e.key==="Enter"){
+    return handleSearch(e)
+  }
+ }
   return (
     <Navbar expand="lg" className="bg-body-tertiary custom-navbar">
       <Container fluid>
@@ -44,6 +48,7 @@ function Header() {
               className="me-2"
               aria-label="Search"
               value={tag}
+              onKeyPress={handleKeyPress}
               onChange={(e) => setTag(e.target.value)}
             />
             <Button onClick={handleSearch} variant="outline-success">
