@@ -32,7 +32,9 @@ function Header() {
         <Navbar.Brand href="/">8ballQuotes</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form onSubmit={handleSearch} className="d-flex mx-auto">
+          
+          <Form
+          className="d-flex mx-auto">
             <Form.Control
               type="search"
               placeholder="Enter tag"
@@ -41,8 +43,11 @@ function Header() {
               value={tag}
               onChange={(e) => setTag(e.target.value)}
             />
-            <Button variant="outline-success">Search By Tag</Button>
+            <Button 
+            onClick={handleSearch}
+            variant="outline-success">Search By Tag</Button>
           </Form>
+
           <Nav className="my-2 my-lg-0" navbarScroll>
             <Button variant="outline-primary" size="sm" className="mx-2 button-block  "><Nav.Link href="/createq"  >CreateQ</Nav.Link></Button>
             <Button variant="outline-success" size="sm"  className="mx-1 "><Nav.Link href="/qlibrary">Qlibrary</Nav.Link></Button>
