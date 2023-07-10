@@ -1,19 +1,25 @@
 const express = require("express");
-require("./connection")
 const cors = require("cors");
 const app = express();
+const quoteRouter = require("./Router/quoteRouter");
+const QuoteModel = require("./Models/quoteModel");
+const mongoose = require("mongoose");
+
+
+require("./connection");
+
 app.use(express.json());
 
-const quoteRouter = require ("./Router/quoteRouter");
-
-
 app.use(
-    cors({
-      origin: "*",
-    })
-  );
+  cors({
+    origin: "*",
+  })
+);
 
 app.use("/quote", quoteRouter);
+
+
+
 
 
 

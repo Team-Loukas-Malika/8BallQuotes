@@ -6,22 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import logoIcon from "../assets/images/Qball.png"
 import "./style.css"
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 
 
 
 function Header() {
-  const [query, setQuery] = useState("");
-
-  
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Perform search logic with the query value
-    console.log("Searching for:", query);
-    // Reset the input field after performing the search
-    setQuery("");
-  }
-
 
 
   
@@ -32,7 +22,7 @@ function Header() {
         <Navbar.Brand href="/">8ballQuotes</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form onSubmit={handleSearch} className="d-flex mx-auto">
+          <Form className="d-flex mx-auto">
             <Form.Control
               type="search"
               placeholder="Search"
