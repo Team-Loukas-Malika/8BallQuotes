@@ -14,7 +14,11 @@
 /* .home-page {
     background-image: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg");
 } */
-
+.search-results{
+  color:white;
+  font-weight: 100;
+  font-size: 66px;
+}
 .App {
     text-align: center;
     background: url("../assets/images/pexels-mikechie-esparagoza-1742370.jpg") no-repeat;

@@ -11,7 +11,7 @@ function SearchResults() {
   return ( 
     <div>
       <div>
-      <h2>Search Results</h2>
+      <h2 className="search-results">Search Results</h2>
       <div className="library-container">
         <Row>
           {searchResults.map((result) => (
