@@ -25,6 +25,8 @@ function QuoteLibrary() {
   },[])
 
 
+
+
   return ( 
     <div className="library-container">
       <Row xs={1} md={2} className="g-4">

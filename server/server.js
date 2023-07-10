@@ -18,7 +18,14 @@ app.use(
 
 app.use("/quote", quoteRouter);
 
-
+app.get("/quotes", async(req, res)=>{
+  try {
+    const allQuotes = await QuoteModel.find({})
+    res.send ({status: "ok", data: allQuotes});
+  } catch{
+    console.log(error)
+  }
+})
 
 
 
