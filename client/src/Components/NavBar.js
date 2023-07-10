@@ -10,14 +10,17 @@ import axios from "axios"
 import {useNavigate } from "react-router-dom";
 
 function Header() {
-  const [tag, setTag] = useState("");
   const navigate = useNavigate();
+  const [tag, setTag] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+
   async function handleSearch(event) {
     event.preventDefault();
     try {
       let response = await axios.get(`http://localhost:3636/quote/tags/${tag}`);
       console.log("response", response);
-      navigate("/tags")
+      navigate("/results", {state: {searchResults: response.data}})
     } catch (error) {
       console.log("Error searching quotes", error);
     }
