@@ -28,7 +28,7 @@ function AppFooter() {
   return (
     <span className="footer-container">
     <Container fluid > 
-      <div className="copyright">8BallQuotes®</div>
+      <div className="copyright">&copy; 2023 8BallQuotes | Made by Loukas Paschopoulos and Malika Omwayi</div>
       <div className="socials">
         <ul>
           <li><a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebookF} /></a></li>
