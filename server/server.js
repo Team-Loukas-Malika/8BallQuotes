@@ -27,6 +27,11 @@ app.get("/quotes", async(req, res)=>{
   }
 })
 
+// 404 error handler
+app.use((req, res) =>{
+  res.status(404).send({error: "Not Found"});
+})
+
 
 
 
