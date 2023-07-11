@@ -242,3 +242,22 @@
     margin-bottom: 30px;
   }
 
+  .error {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 60px;
+
+  }
+
+  .error a {
+    text-decoration: none;
+    margin-bottom: 70px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(16, 135, 107);
+    color: white;
+  }
+
+.error img {
+  width: 180px;
+}

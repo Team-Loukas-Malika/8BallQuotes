@@ -3,7 +3,8 @@ import CreateQ from "./Components/CreateQ";
 import HomePage from "./Components/HomePage";
 import Qlibrary from "./Components/Qlibrary";
 import Header from "./Components/NavBar";
-import SearchResults from "./Components/SearchResults"; 
+import SearchResults from "./Components/SearchResults";
+import NotFound from "./Components/NotFound"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/createq" element={<CreateQ />} />
             <Route path="/qlibrary" element={<Qlibrary />} />
             <Route path="/results" element={<SearchResults />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>

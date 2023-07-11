@@ -12,7 +12,9 @@ import {useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   const [tag, setTag] = useState("");
+    // eslint-disable-next-line 
   const [searchResults, setSearchResults] = useState([]);
+
 
 
   async function handleSearch(event) {
