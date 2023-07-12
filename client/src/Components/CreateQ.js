@@ -23,7 +23,7 @@ function CreateQuote() {
       createdAt: Date()
     };
     try {
-      let response = await axios.post("https://eightballquotes-original.onrender.com/quote/", newQuote)
+      let response = await axios.post(" https://eightballquotes-server.onrender.com/quote/", newQuote)
       if (response.status === 200) {
         alert("Quote created successfully! Go to QLibrary.")
         console.log(newQuote)
