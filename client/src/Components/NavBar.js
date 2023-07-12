@@ -20,7 +20,7 @@ function Header() {
   async function handleSearch(event) {
     event.preventDefault();
     try {
-      let response = await axios.get(`https://eightballquotes-original.onrender.com/quote/tags/${tag}`);
+      let response = await axios.get(` https://eightballquotes-server.onrender.com/quote/tags/${tag}`);
       console.log("response", response);
 
       navigate("/results", {state: {searchResults: response.data}})
