@@ -1,3 +1,5 @@
+{
+  "name": "8ballquotes",
   "version": "1.0.0",
   "description": "greenfield project for quotes hub",
   "main": "index.js",
