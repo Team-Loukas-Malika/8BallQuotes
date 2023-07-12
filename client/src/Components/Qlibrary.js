@@ -10,7 +10,7 @@ function QuoteLibrary() {
 
   async function getQuotes() {
     try {
-      let response = await axios.get("https://eightballquotes-original.onrender.com/quote/")
+      let response = await axios.get(" https://eightballquotes-server.onrender.com/quote/")
       console.log(response)
       setAllQuotes(response.data)
       console.log(allQuotes)
