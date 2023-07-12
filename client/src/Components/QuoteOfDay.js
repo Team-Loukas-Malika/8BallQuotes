@@ -35,7 +35,7 @@ function QuoteOfDay() {
       image   : quote.image || defaultImage,
     }
     try {
-      let response = await axios.post("https://eightballquotes-original.onrender.com/quote/", quotes)
+      let response = await axios.post(" https://eightballquotes-server.onrender.com/quote/", quotes)
       if (response.status === 200) {
         alert('Your quote has been saved successfully! Go to QLibrary.');
         console.log(quotes)
